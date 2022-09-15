@@ -1,0 +1,113 @@
+
+
+.login{
+    background-color: hsl(219, 48%, 8%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer {
+    width: 50%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0  0 10px rgba(0, 0, 0, 0.336);
+}
+
+.loginForm {
+    background-color: inherit;
+    height: 70vh;
+    padding: 2vmax;
+}
+
+.loginForm > h4 {
+    margin: 2vmax;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    animation: AdminFormInputsAnimation 1s ease-in-out forwards;
+}
+
+@keyframes AdminFormInputsAnimation {
+    from{
+        transform: translateX(-100vw);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.loginForm > h4 > p {
+    transition: all 0.5s;
+    cursor: default;
+}
+
+.loginForm > h4 > p:hover {
+    transform: translateY(-10px);
+}
+
+.loginForm > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.loginForm > div > input {
+    padding: 1vmax 2vmax;
+    margin: 1vmax;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    border-radius: 30px;
+    outline: none;
+    font: 100 1rem "Roboto";
+    animation: AdminFormInputsAnimation 1s ease-in-out forwards 0.5s;
+}
+
+.loginForm > div > button {
+    padding: 1vmax 2vmax;
+    margin: 1vmax;
+    border-radius: 30px;
+    background-color: hsl(250, 100%, 75%);
+    color: white;
+    transform: translateY(-100vh);
+    animation: AdminFormBtnAnimation 1s ease-in-out forwards 1s;
+    transition: all 0.5s;
+
+}
+
+@keyframes AdminFormBtnAnimation {
+    to{
+        transform: translateY(0);
+    }
+}
+
+.loginForm > div > button:hover {
+    background-color: hsl(219, 48%, 8%);
+}
+
+@media screen and (max-width:600px) {
+    .loginContainer{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .loginForm{
+        border-radius: 0;
+    }
+
+    .loginForm > div {
+        padding: 4vw 8vw;
+    }
+
+    .loginForm > div > input {
+        padding: 3vw 6vw;
+        margin: 2vw;
+    }
+
+    .loginForm > div > button {
+        padding: 3vw 6vw;
+        margin: 2vw;
+    }
+}
